@@ -1,0 +1,14 @@
+{
+  "name": "modules-unraveled/drush-shell-aliases",
+  "description": "Useful Drush shell-aliases for Drupal 8 development.",
+  "minimum-stability": "dev",
+  "type": "drupal-drush",
+  "authors": [
+    {
+      "name": "Brian Lewis",
+      "email": "brian@modulesunraveled.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {}
+}
