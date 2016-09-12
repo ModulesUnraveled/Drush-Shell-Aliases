@@ -17,11 +17,11 @@ $options['shell-aliases'] = array(
     '!echo "\nReplacing the {{@target}} database with the one from {{#live}}"
     drush sql-sync -y {{#live}} {{@target}} --create-db --sanitize',
   'files-stage' =>
-    '!echo "\nSyncing files from {{#Stage}} to {{@target}}"
-    drush rsync -y {{#Stage}}:%files {{@target}}:%files',
+    '!echo "\nSyncing files from {{#stage}} to {{@target}}"
+    drush rsync -y {{#stage}}:%files {{@target}}:%files',
   'files-stage' =>
-    '!echo "\nSyncing files from {{#Stage}} to {{@target}}"
-    drush rsync -y {{#Stage}}:%files {{@target}}:%files',
+    '!echo "\nSyncing files from {{#stage}} to {{@target}}"
+    drush rsync -y {{#stage}}:%files {{@target}}:%files',
   'files-live' =>
     '!echo "\nSyncing files from {{#live}} to {{@target}}"
     drush rsync -y {{#live}}:%files {{@target}}:%files',
