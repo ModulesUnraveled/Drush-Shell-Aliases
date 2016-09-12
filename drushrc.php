@@ -1,25 +1,5 @@
 <?php
 
-/**
- * To use all of the commands in this file, you must have an alias file
- * on each server named something like "mysite.aliases.drushrc.php"
- * Examples of the content required for each environment are provided
- * In the Examples branch of this repo:
- * https://github.com/ModulesUnraveled/Drush-Shell-Aliases/tree/examples
- *
- * When setup, you could:
- *
- * Sync the prod database down to the local site by typing:
- * "drush @mysite.loc data-live"
- *
- * Or, fully rebuild your local site by typing
- * "drush @mysite.loc rebuild"
- * Which:
- * 1. Runs 'composer install'
- * 2. Syncs a copy of the live database
- * 3. Imports the current Git branch's configuration
- */
-
 // This is just a simple test to make sure your environment is reading this file
 // To test, run `drush @yoursite.instance statusss`
 $options['shell-aliases'] = array(
