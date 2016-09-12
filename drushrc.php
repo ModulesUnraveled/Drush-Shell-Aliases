@@ -1,6 +1,7 @@
 <?php
 
-// This is just a simple test to make sure your environment is reading this file
+// The first example "statusss" is just a simple test
+// to make sure your environment is reading this file
 // To test, run `drush @yoursite.instance statusss`
 $options['shell-aliases'] = array(
   'statusss' =>
@@ -9,11 +10,6 @@ $options['shell-aliases'] = array(
     echo "\nChecking the status of {{@target}} again"
     drush {{@target}} status
     echo "Finished checking the status of {{@target}} twice"',
-);
-
-// Useful file/database management commands
-// These are designed to be run on a local environment
-$options['shell-aliases'] = array(
   'data-stage' =>
     '!echo "\nReplacing the {{@target}} database with the one from {{#stage}}"
     drush sql-sync -y {{#stage}} {{@target}} --create-db --sanitize',
@@ -29,11 +25,6 @@ $options['shell-aliases'] = array(
   'files-live' =>
     '!echo "\nSyncing files from {{#live}} to {{@target}}"
     drush rsync -y {{#live}}:%files {{@target}}:%files',
-);
-
-// Useful configuration management commands
-// These are designed to be run on a local environment
-$options['shell-aliases'] = array(
   'confex' =>
     "!echo '\nDisabling development modules'
     drush {{@target}} pmu -y $(cat ../mods_enabled.local | tr '\n' ' ')
@@ -50,11 +41,6 @@ $options['shell-aliases'] = array(
     drush {{@target}} updb -y
     echo '\nClearing caches'
     drush {{@target}} cr",
-);
-
-// Useful workflow commands
-// These are designed to be run on a local environment
-$options['shell-aliases'] = array(
   'rebuild' =>
     "!echo '\nRunning composer install from the project root'
     cd ..
@@ -63,11 +49,6 @@ $options['shell-aliases'] = array(
     drush {{@target}} confim
     echo '\nLogging into {{@target}} as uid1'
     drush {{@target}} uli uid=1",
-);
-
-// Useful commands to maintain remote environments
-// These are designed to be run on staging and production machines
-$options['shell-aliases'] = array(
   'confim-no-dev' =>
     '!echo "\nImporting configuration"
     drush {{@target}} cim -y
@@ -95,11 +76,6 @@ $options['shell-aliases'] = array(
     drush {{@target}} confim-no-dev
     echo '\nUse the following link to log into {{@target}} as uid1'
     drush {{@target}} uli uid=1 --no-browser",
-);
-
-// Useful commands for deploying yoru Git repo to stage and live
-// These are designed to be run on a local environment
-$options['shell-aliases'] = array(
   'deploy-stage' =>
     "!echo '\nDeploying the latest state of the develop branch to staging'
     echo 'Pulling the latest develop branch'
