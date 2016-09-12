@@ -3,7 +3,9 @@
 /**
  * To use all of the commands in this file, you must have an alias file
  * on each server named something like "mysite.aliases.drushrc.php"
- * Examples of the content required for each environment are provided.
+ * Examples of the content required for each environment are provided
+ * In the Examples branch of this repo:
+ * https://github.com/ModulesUnraveled/Drush-Shell-Aliases/tree/examples
  *
  * When setup, you could:
  *
