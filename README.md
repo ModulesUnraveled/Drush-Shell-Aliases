@@ -4,12 +4,16 @@ To use all of the commands in this file, you must have an alias file on each ser
 ## How to Use These Commands
 When setup, you could:
 
-Sync the prod database down to the local site by typing:
+* Sync the prod database down to the local site by typing:
+
 `drush @mysite.loc data-live`
 
-Or, fully rebuild your local site by typing
+* Or, fully rebuild your local site by typing:
+
 `drush @mysite.loc rebuild`
+
 Which:
+
 1. Runs "composer install" from the project root
 2. Syncs a copy of the live database
 3. Imports the current Git branch's configuration
