@@ -1,7 +1,11 @@
 {
   "name": "modules-unraveled/drush-shell-aliases",
   "description": "Useful Drush shell-aliases for Drupal 8 development.",
+  "homepage": "https://github.com/ModulesUnraveled/Drush-Shell-Aliases",
+  "license": "GPL-2.0+",
   "minimum-stability": "dev",
+  "prefer-stable": true,
+  "keywords": ["drush"],
   "type": "drupal-drush",
   "authors": [
     {
