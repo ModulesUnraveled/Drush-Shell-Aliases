@@ -19,9 +19,6 @@ $options['shell-aliases'] = array(
   'files-stage' =>
     '!echo "\nSyncing files from {{#stage}} to {{@target}}"
     drush rsync -y {{#stage}}:%files {{@target}}:%files',
-  'files-stage' =>
-    '!echo "\nSyncing files from {{#stage}} to {{@target}}"
-    drush rsync -y {{#stage}}:%files {{@target}}:%files',
   'files-live' =>
     '!echo "\nSyncing files from {{#live}} to {{@target}}"
     drush rsync -y {{#live}}:%files {{@target}}:%files',
@@ -85,7 +82,7 @@ $options['shell-aliases'] = array(
     git checkout staging
     git merge develop
     echo '\nCreating a release tag with the current date and time'
-    echo 'Then pushing everything (including tags) to master'
+    echo 'Then pushing everything (including tags) to staging'
     git tag REL-STAGING-$(date +'%Y%m%d-%H%M%S')
     git push --tags
     git push origin staging
