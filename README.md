@@ -1,6 +1,20 @@
 # Useful Drush Commands for Drupal 8 Development
 To use all of the commands in this file, you must have an alias file on each server named something like "mysite.aliases.drushrc.php". Information on examples is [provided below](#examples).
 
+## Composer
+If you use composer to install these, you'll need to add something like the following to your /drush/drushrc.php file
+
+```
+<?php
+
+ /**
+ * Load additional drushrc.php files
+ */
+if (file_exists(__DIR__ . '/contrib/drush-shell-aliases/drushrc.php')) {
+  include __DIR__ . '/contrib/drush-shell-aliases/drushrc.php';
+}
+```
+
 ## How to Use These Commands
 When setup, you could:
 
